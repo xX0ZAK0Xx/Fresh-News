@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.FreshNews" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#0073D9</item>
+        <item name="colorPrimaryVariant">#003C7D</item>
+        <item name="colorOnPrimary">#FEE572</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#00DEC1</item>
+        <item name="colorSecondaryVariant">#00AC95</item>
+        <item name="colorOnSecondary">#FEE572</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">#0073D9</item>
+        <!-- Customize your theme here. -->
+        <item name="android:forceDarkAllowed" tools:targetApi ="q" >false</item>
+    </style>
+</resources>
