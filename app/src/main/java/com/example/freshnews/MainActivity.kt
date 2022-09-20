@@ -1,16 +1,18 @@
 package com.example.freshnews
 
-import androidx.appcompat.app.AppCompatActivity
+import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
-import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.browser.customtabs.CustomTabColorSchemeParams
+import androidx.browser.customtabs.CustomTabsIntent
+import androidx.core.app.ShareCompat.IntentBuilder
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Request
-import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.example.meme_share.MySingleton
-import org.json.JSONObject
+
 
 class MainActivity : AppCompatActivity(), NewsItemClicked {
     private lateinit var mAdapter: NewsListAdapter
@@ -52,6 +54,9 @@ class MainActivity : AppCompatActivity(), NewsItemClicked {
 
     override fun onItemClicked(item: News) {
         //Toast.makeText(this,"Clicked item $item", Toast.LENGTH_LONG).show()
+        val builder = CustomTabsIntent.Builder()
+        val customTabsIntent = builder.build()
+        customTabsIntent.launchUrl(this, Uri.parse(item.url))
     }
 
 }
